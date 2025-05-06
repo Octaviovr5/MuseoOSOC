@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Museo OSOC</title>
+
+<!-- Metadatos básicos -->
+<meta name="description" content="Un punto de encuentro para artistas y amantes del arte, OSOC ofrece exposiciones, talleres y eventos que exploran las tendencias más actuales.">
+<meta name="keywords" content="arte contemporáneo, exposiciones, museo, creatividad, OSOC">
+<meta name="author" content="Octavio Velazquez">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/museo.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Museo OSOC">
+<meta property="og:description" content="Explora el arte contemporáneo como nunca antes. Exposiciones inmersivas, talleres y eventos en un museo innovador.">
+<meta property="og:image" content="https://i.imgur.com/QxXRjPn.jpeg">
+<meta property="og:url" content="https://octaviovr5.github.io/Museo-OSOC/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Museo OSOC">
+<meta name="twitter:description" content="Explora el arte contemporáneo como nunca antes. Exposiciones inmersivas, talleres y eventos en un museo innovador.">
+<meta name="twitter:image" content="https://i.imgur.com/XXbyIow.png">
+
+
+<!-- Panellum -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- Cargador -->
+<div class="cargador">
+  <div class="spinner">
+    <img src="images/siluetag.gif" alt="Cargando...">
+  </div>
+</div>
+
+<!-- HOME SECTION -->
+<div class="container">
+  <section id="home" class="parallax-section">
+      <div class="home-wrapper">
+          <h3 class="animate-fade-in" style="animation-delay: 0.3s">Museo OSOC</h3> 
+          
+          <!-- Línea azul decorativa -->
+          <div class="blue-divider animate-fade-in" style="animation-delay: 0.45s"></div>
+          
+          <h1 class="animate-fade-in" style="animation-delay: 0.6s">
+              Un espacio único diseñado para explorar, sentir y vivir el arte del presente. 
+              <br>Donde el arte nace de la oscuridad y los sueños se transforman en creación.
+          </h1>
+          <a href="#about" class="animate-fade-in arrow-btn" style="animation-delay: 1s">
+              <i class="arrow-icon">↓</i>
+          </a>
+          <h3 class="animate-fade-in" style="animation-delay: 0.8s; color: #d7b065; margin-top: 25%;" id="origen">
+              Origen, Sueño, Oscuridad y Creación
+          </h3>
+      </div>
+  </section>
+</div>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="container">
+    <div class="section-card"> <!-- Tarjeta contenedora -->
+    <div class="row">
+      <div class="col-md-4">
+        <img src="images/maquetaterbl.png" alt="Maqueta museo">
+        <div>
+          <h4>Sobre el Museo</h4>
+          <p>"Museo <span class="gold-text">OSOC</span> es un espacio innovador donde el arte contemporáneo se vive, se explora y se transforma. Su arquitectura vanguardista y sus exposiciones inmersivas desafían las percepciones, creando experiencias únicas para el público. Aquí, el arte no solo se observa, sino que se experimenta a través de instalaciones interactivas, tecnología y expresiones audaces."</p>
+          <div id="buttons"> 
+            <a href="#work" id="flotante" class="animate-fade-in" style="animation-delay: 1.2s">EXPLORA LOS NIVELES</a>
+            <a href="#talleresOsoc" id="flotante" class="animate-fade-in" style="animation-delay: 1.3s">EVENTOS Y TALLERES</a>
+            <a href="#contact" id="flotante" class="animate-fade-in" style="animation-delay: 1.4s">VISITANOS</a>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div>
+          <h3>OSOC</h3>
+          <h2>"Cada exposición en OSOC es una ventana al futuro. Con artistas que rompen moldes y desafían lo conocido, aquí experimentarás el arte como nunca antes."</h2>
+          <img src="images/fachadacentral.png" alt="entrada">
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div>
+          <h3>Exposiciones</h3>
+          <h4>"En OSOC está diseñado para desafiar la percepción, conectar con las emociones más profundas y celebrar el poder transformador del arte.</h4>
+          <div style="position: relative;">
+            <video id="videntrada" autoplay loop muted playsinline>
+              <source src="https://www.irvinvelazquez.com.mx/ffachada.mp4" type="video/mp4">
+              Tu navegador no soporta la etiqueta de video.
+            </video>
+            <button id="fullscreenBtn" style="position: absolute; bottom: 10px; right: 10px; padding: 6px 12px; margin-bottom: 7px; background-color: rgba(0,0,0,0.6); color: white; border: none; border-radius: 4px; cursor: pointer;">
+              ⛶
+            </button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK SECTION -->
+<section id="work">
+  <div class="container">
+    <div class="section-card"> <!-- Tarjeta contenedora -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="font-size: 500%;">OSOC</h3>
+        <h1>"Desde instalaciones lumínicas y obras interactivas hasta talleres creativos y recorridos guiados, OSOC no es solo un museo; es una experiencia sensorial que invita a soñar, crear y reflexionar..."</h1>
+      </div>
+
+      <!-- Panorámica -->
+      <div class="col-md-3">
+        <h3 style="font-size: 500%;">OS</h3>
+        <h4>Este nivel representa la <span class="gold-text">OSCURIDAD</span> de las ideas y el <span class="gold-text">SUEÑO</span> como fuente de inspiración. Es un espacio cerrado, íntimo y envolvente que prepara a los visitantes para el viaje que emprenderán en los niveles superiores.</h4>
+        <div id="panorama"></div>
+        <h4>Inmersión 360 nivel 1</h4>
+      </div>
+
+      <!-- Galería de imágenes -->
+      <div class="col-md-3">
+        <img src="images/aentrada.png" alt="Acceso principal">
+        <h4>Acceso Principal PB</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/alab.png" alt="Ala A">
+        <h4>Ala este</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/acenter.png" alt="Centro de planta baja">
+        <h4>Centro PB</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/alaa.png" alt="Ala B">
+        <h4>Punto Céntrico</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/stairss.png" alt="Ala B">
+        <h4>Ala Norte</h4>
+      </div>
+
+      <!-- Level one Origen -->
+      <div class="col-md-3" id="levelone">
+        <h3 style="font-size: 500%;">O</h3>
+        <h4>
+          Explora el <span class="gold-text">origen</span> de las ideas y las civilizaciones en un espacio lleno de contrastes. El Nivel 1 de OSOC combina obras que representan los inicios de la humanidad con piezas contemporáneas y aleatorias, creando un diálogo entre lo antiguo y lo moderno.
+        </h4>
+        <div id="panoramalvone"></div>
+        <h4>Inmersión 360 Planta baja</h4>
+      </div>
+
+      <!-- Galería nivel 1 -->
+      <div class="col-md-3">
+        <img src="images/pb/skyweb.webp" alt="Vista alta">
+        <h4>Vista Completa</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/monalisa.webp" alt="Gioconda">
+        <h4>Gioconda</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/grito.webp" alt="Scream">
+        <h4>El grito</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/notredame.webp" alt="Notredame">
+        <h4>Notredame</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/romastatua.webp" alt="Estatua romana">
+        <h4>Estatua romana</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/rupestre.webp" alt="Pintura Rupestre">
+        <h4>Pintura Rupestre</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/pb/uplatano.webp" alt="Banana">
+        <h4>Banana</h4>
+      </div>
+</section>
+<!-- LEVEL DOS CREACIÓN -->
+<section id="leveltwo">
+  <div class="container">
+    <div class="section-card"> <!-- Tarjeta contenedora -->
+    <div class="row">
+      <!-- Introducción y panorámica -->
+      <div class="col-md-3" id="leveltwo">
+        <h3 style="font-size: 500%;">C</h3>
+        <h4>
+          Libera tu mente en un espacio donde el nivel <span class="gold-text">CREACIÓN</span> rompe todos los límites. El Nivel 2 de OSOC es un laboratorio de ideas audaces, donde obras surrealistas y experiencias interactivas desafían la realidad.
+        </h4>
+        <div style="position: relative; margin-bottom: 20px;">
+          <video id="videolv" src="https://www.irvinvelazquez.com.mx/lv.mp4" autoplay loop muted playsinline style="width: 100%;"></video>
+          <button id="fullscreenBtnLv" style="position: absolute; bottom: 10px; right: 10px; padding: 6px 12px; margin-bottom: 7px; background-color: rgba(0,0,0,0.6); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+            ⛶
+          </button>
+        </div>
+        <div id="panoramaf"></div>
+        <h4>Inmersión 360 Entrada Último Nivel</h4>
+      </div>
+
+      <!-- Galería nivel 2 -->
+      <div class="col-md-3">
+        <img src="images/lastlevel/dogballom.webp" alt="DogBallon" style="width: 100%; margin-bottom: 15px;">
+        <h4>DogBallon</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/lastlevel/daftpunk.jpg" alt="Daft-Punk" style="width: 100%; margin-bottom: 15px;">
+        <h4>Daft-Punk</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/lastlevel/pecera.jpg" alt="pecera" style="width: 100%; margin-bottom: 15px;">
+        <h4>Acuario</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/lastlevel/delorean.jpg" alt="Delorean" style="width: 100%; margin-bottom: 15px;">
+        <h4>Delorean</h4>
+      </div>
+
+      <div class="col-md-3">
+        <img src="images/lastlevel/surfbtf.jpg" alt="Patineta BtoF" style="width: 100%; margin-bottom: 15px;">
+        <h4>Patineta BtoF</h4>
+      </div>
+
+      <!-- Segunda panorámica -->
+      <div class="col-md-3">
+        <div id="panoramaentrada"></div>
+        <h4>Inmersión 360 Último Nivel Salida</h4>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Seccion cine -->
+<div class="col-md-3" id="talleresOsoc">
+  <h3 style="font-size: 200%;">Zona OSOC</h3>
+  <h4>
+    En este rincón del nivel <span class="gold-text">CREACIÓN</span>, los cortos cobran vida, las ideas se proyectan y el arte se reinventa. Cine, performance y talleres convergen en una misma frecuencia.
+  </h4>
+
+  <div style="position: relative;">
+    <video id="videocn" src="https://www.irvinvelazquez.com.mx/cine.mp4" autoplay loop muted playsinline></video>
+    <button id="fullscreenBtnCn" style="position: absolute; bottom: 10px; right: 10px; padding: 6px 12px; margin-bottom: 7px; background-color: rgba(207, 207, 207, 0.208); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+      ⛶
+    </button>
+  </div>
+
+  <h4>Sala de exposiciones cinematográficas</h4>
+</div>
+
+<div class="col-md-3" id="preludioOsoc">
+  <h1 style="font-size: 2rem; color:#000000a5; margin: 0; padding: 0;">Tienda oficial </h1><h1 style="font-size:2rem; color: #d7b065; margin: 0;padding:0;" >OSOC</h1>
+  <div style="position: relative;">
+    <video id="videopreludio" src="https://www.irvinvelazquez.com.mx/tienda.mp4" autoplay loop muted playsinline></video>
+    <button id="fullscreenBtnPreludio" style="position: absolute; bottom: 10px; right: 10px; padding: 6px 12px; margin-bottom: 7px; background-color: rgba(0,0,0,0.6); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+      ⛶
+    </button>
+  </div>
+</div>
+
+<!-- Section carrusel -->
+<h2 style="text-align:center; color: #d7b065; font-size:medium;">Nuestros Productos</h2>
+
+<div class="carousel-container">
+  <button class="carousel-btn prev">&#10094;</button>
+  <div class="carousel-track" id="carouselTrack">
+    <!-- Productos originales -->
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtdog.png" alt="Producto 1" />
+        <h4>Camiseta Perro Globo</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtcherry.png" alt="Producto 2" />
+        <h4>Camiseta cereza</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtart.png" alt="Producto 3" />
+        <h4>Camiseta LvO</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtosoc.png" alt="Producto 4" />
+        <h4>Camiseta OSOC</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtpicasso.png" alt="Producto 5" />
+        <h4>Camiseta Piccaso</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+
+    <!-- Productos duplicados para efecto de bucle -->
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtdog.png" alt="Producto 1" />
+        <h4>Camiseta Perro Globo</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtcherry.png" alt="Producto 2" />
+        <h4>Camiseta Cereza</h4>
+        <p>$250.mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtart.png" alt="Producto 3" />
+        <h4>Camiseta LvO</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtosoc.png" alt="Producto 4" />
+        <h4>Camiseta OSOC</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div>
+        <img src="images/souvenir/tshirtpicasso.png" alt="Producto 5" />
+        <h4>Camiseta Picasso</h4>
+        <p>$250.00mxn</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-btn next">&#10095;</button>
+</div>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>¡Visitas grupales en OSOC!</h3>
+        <p>Vive una experiencia unica con tu grupo en el museo que conecta el origen, el sueño, la oscuridad y la creación.</p>
+      </div>
+
+      <div class="col-md-12 col-sm-12">
+        <!-- Formulario mejorado -->
+        <div class="wow fadeInUp" data-wow-delay="0.6s">
+          <form action="#" method="post" id="contact-form">
+            <div class="row">
+              <!-- Nombre -->
+              <div class="col-md-6 col-sm-6">
+                <input type="text" id="name" class="form-control" name="name" placeholder="📛 Tu nombre completo" required>
+              </div>
+              
+              <!-- Email -->
+              <div class="col-md-6 col-sm-6">
+                <input type="email" id="email" class="form-control" name="email" placeholder="✉️ Email de contacto" required>
+              </div>
+              
+              <!-- Fecha con placeholder mejorado -->
+              <div class="col-md-12 col-sm-12">
+                <input type="text" id="date" class="form-control" name="date" 
+                       placeholder="📅 Selecciona la fecha de visita" 
+                       onfocus="(this.type='date')" 
+                       onblur="if(!this.value)this.type='text'" 
+                       required>
+              </div>   
+              
+              <!-- Hora con placeholder mejorado -->
+              <div class="col-md-6 col-sm-6">
+                <input type="text" id="time" class="form-control" name="time" 
+                       placeholder="🕒 Horario preferido (9:00 - 22:00)" 
+                       onfocus="(this.type='time')" 
+                       onblur="if(!this.value)this.type='text'" 
+                       min="09:00" max="22:00" required>  
+              </div>    
+              
+              <!-- Select mejorado -->
+              <div class="col-md-6 col-sm-6">          
+                <select id="nivel" name="nivel" required class="form-control">
+                  <option value="" disabled selected hidden>🏫 ¿De dónde nos visita?</option>
+                  <option value="kinder">👶 Kinder (3-6 años)</option>
+                  <option value="primaria">👧 Primaria (6-12 años)</option>
+                  <option value="secundaria">🧑 Secundaria (12-15 años)</option>
+                  <option value="preparatoria">👨‍🎓 Preparatoria (15-18 años)</option>
+                  <option value="universidad">🎓 Universidad</option>
+                  <option value="empresa">💼 Empresa/Organización</option>
+                  <option value="otro">❓ Otro (especificar abajo)</option>
+                </select>
+              </div> 
+              
+              <!-- Número de personas -->
+              <div class="col-md-6 col-sm-6">
+                <input type="number" id="personas" name="personas" min="1" max="50" required 
+                       class="form-control" placeholder="👥 Número de personas (máx. 50)">  
+              </div>
+              
+              <!-- Mensaje -->
+              <div class="col-md-12 col-sm-12">
+                <textarea id="message" class="form-control" rows="5" name="message" 
+                          placeholder="💬 ¿Algo más que debamos saber? (requerimientos especiales, comentarios, etc.)" 
+                          required></textarea>
+              </div>
+              
+              <!-- Botón de enviar -->
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+                <button id="submit" type="submit" class="form-control">
+                  <i class="fa fa-calendar-check-o"></i> AGENDAR VISITA
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer id="footer" class="parallax-section">
+  <div class="container">
+      <div class="row">
+
+             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.2s">
+                  <h4>Artista Digital <a href="">Octavio</a> </h4>
+                  <p>        Diseño web y
+                  <br> Proyecto Arquitectonico creado por <a href="https:/octaviovr5.github.io/Portafolio-Octavio/">Octavio</a>
+                  </p>
+             </div>
+
+             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
+                  <div class="support-cus">
+                       <h4>Ubicación</h4>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3163.9839946980724!2d-99.02590240977631!3d19.428287869992598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1739931045535!5m2!1ses-419!2smx" width="95%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"
+                       sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                      <a href="https://maps.app.goo.gl/iy6BGzWDoPTJnhCT8"><p>57205 Cdad. Jardín, Méx</p></a> 
+                  </div>
+                  <div class="support-cus">
+                       <h4>Información de contacto</h4>
+                       <p><a href="mailto:museo.osoc@gmail.com">Museo_OSOC@osoc.com.mx</a></p>
+                       <p> <a href="tel:+525648967642">Tel: +52 56 4896 7642</a> </p>
+                  </div>
+             </div>
+
+
+             <!-- Mail-spam -->
+             <!-- <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
+                  <h4>Newsletter</h4>
+                  <form class="newsletter" action="#" method="get">
+                       <input name="email" type="email" class="form-control" id="email" placeholder="Your Email Address">
+                       <button name="submit" value="sign-up" class='form-control'>Sign Up</button>
+                  </form>
+             </div> -->
+
+             <div class="col-md-12 col-sm-12 clearfix">
+                  <div class="dash-line"></div>
+             </div>
+
+             <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.8s">
+              <p class="copyright-text">Copyright © 2025 <a href="https://octaviovr5.github.io/Portafolio-Octavio/">Octavio Velazquez</a></p>
+            </div>
+            
+            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
+              <ul class="social-icon">
+                <li><a href="https://www.instagram.com/octaviovr3/" class="fa fa-instagram" target="_blank"></a></li>
+                <li><a href="https://wa.me/5215648967642" class="fa fa-whatsapp" target="_blank"></a></li>
+                <li><a href="https://github.com/Octaviovr5" class="fa fa-github" target="_blank"></a></li>
+              </ul>
+            </div>
+        </div>
+   </div>
+</footer>
+
+<!-- Scripts esenciales -->
+ <script src="js/script.js" ></script>
+<script>
+  // Cargador
+  window.addEventListener('load', function() {
+    document.querySelector('.cargador').style.display = 'none';
+  });
+
+  // Fullscreen buttons
+  document.getElementById('fullscreenBtn').addEventListener('click', function() {
+    const video = document.getElementById('videntrada');
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+
+  document.getElementById('fullscreenBtnLv').addEventListener('click', function() {
+    const video = document.getElementById('videolv');
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+
+  document.getElementById('fullscreenBtnCn').addEventListener('click', function() {
+    const video = document.getElementById('videocn');
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+
+  document.getElementById('fullscreenBtnPreludio').addEventListener('click', function() {
+    const video = document.getElementById('videopreludio');
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+
+  // Carrusel
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.product-card');
+    const itemWidth = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
+    const totalWidth = itemWidth * items.length;
+    
+    let currentPosition = 0;
+    const visibleItems = Math.floor(document.querySelector('.carousel-container').offsetWidth / itemWidth);
+    
+    document.querySelector('.next').addEventListener('click', function() {
+      if (currentPosition > -(totalWidth - (visibleItems * itemWidth))) {
+        currentPosition -= itemWidth;
+        track.style.transform = `translateX(${currentPosition}px)`;
+      }
+    });
+    
+    document.querySelector('.prev').addEventListener('click', function() {
+      if (currentPosition < 0) {
+        currentPosition += itemWidth;
+        track.style.transform = `translateX(${currentPosition}px)`;
+      }
+    });
+  });
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
