@@ -396,22 +396,15 @@
               
               <!-- Fecha con placeholder mejorado -->
               <div class="col-md-12 col-sm-12">
-                <input type="text" id="date" class="form-control" name="date" 
-                       placeholder="📅 Selecciona la fecha de visita" 
-                       onfocus="(this.type='date')" 
-                       onblur="if(!this.value)this.type='text'" 
-                       required>
+                <input type="date" id="date" class="form-control" name="date"  placeholder="📅 Selecciona la fecha de visita" required>
               </div>   
               
               <!-- Hora con placeholder mejorado -->
               <div class="col-md-6 col-sm-6">
-                <input type="text" id="time" class="form-control" name="time" 
-                       placeholder="🕒 Horario preferido (9:00 - 22:00)" 
-                       onfocus="(this.type='time')" 
-                       onblur="if(!this.value)this.type='text'" 
-                       min="09:00" max="22:00" required>  
+                <input type="time" id="time" class="form-control" name="time" 
+                       placeholder="🕒 Horario de servicio (9:00 - 22:00)" min="09:00" max="22:00" required>  
               </div>    
-              
+
               <!-- Select mejorado -->
               <div class="col-md-6 col-sm-6">          
                 <select id="nivel" name="nivel" required class="form-control">

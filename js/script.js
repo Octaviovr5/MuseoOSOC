@@ -285,6 +285,17 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     });
 });
 
+// Fecha y hora
+ // Abrir el selector de fecha automáticamente al hacer clic
+ document.getElementById("date").addEventListener("click", function() {
+    this.showPicker && this.showPicker(); // algunos navegadores modernos lo soportan
+  });
+
+  // Abrir el selector de hora automáticamente al hacer clic
+  document.getElementById("time").addEventListener("click", function() {
+    this.showPicker && this.showPicker();
+  });
+
 // document.getElementById("contact-form")?.addEventListener("submit", function(event) {
 //     event.preventDefault();
 

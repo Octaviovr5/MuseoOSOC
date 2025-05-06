@@ -655,7 +655,7 @@ h1 {
     z-index: 9999;
   }
   .cargador img {
-    max-width: 100px;
+    max-width: 100%;
   }
 
   #buttons {
