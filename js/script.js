@@ -1,16 +1,3 @@
-// Bloquear consola
-document.addEventListener("keydown", function (event) {
-    if (event.key === "F12" || 
-        (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) || 
-        (event.ctrlKey && event.key === "U")) {
-        event.preventDefault();
-    }
-});
-
-// Bloquea la consola
-console.log = console.warn = console.error = function() {};
-console.debug = function() { return null; };
-
 // Evita `debugger`
 setInterval(() => {
     (function() {

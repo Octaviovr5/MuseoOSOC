@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte Moderno</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Metadatos básicos -->
+<meta name="description" content="Un punto de encuentro para artistas y amantes del arte, OSOC ofrece exposiciones, talleres y eventos que exploran las tendencias más actuales.">
+<meta name="keywords" content="arte contemporáneo, exposiciones, museo, creatividad, OSOC">
+<meta name="author" content="Octavio Velazquez">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/museo.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Museo OSOC">
+<meta property="og:description" content="Explora el arte contemporáneo como nunca antes. Exposiciones inmersivas, talleres y eventos en un museo innovador.">
+<meta property="og:image" content="https://i.imgur.com/QxXRjPn.jpeg">
+<meta property="og:url" content="https://octaviovr5.github.io/Museo-OSOC/">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Museo OSOC">
+<meta name="twitter:description" content="Explora el arte contemporáneo como nunca antes. Exposiciones inmersivas, talleres y eventos en un museo innovador.">
+<meta name="twitter:image" content="https://i.imgur.com/XXbyIow.png">
+
+<!-- Panellum -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    /* Estilos generales */
+      /* Cargador */
+  .cargador {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .cargador img {
+    max-width: 100%;
+  }
+
+  #buttons {
+    flex-direction: column;
+    align-items: center;
+}
+/*---------------------------------------
+  Home section - Optimizada              
+-----------------------------------------*/
+#home {
+    background: url('../images/museo.png') center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 500px;
+    text-align: center;
+    position: relative;
+    margin: 0 12px 0 12px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.home-wrapper {
+    background: rgba(167, 185, 204, 0.406);
+    width: 100%;
+    padding: 40px 20px;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/*---------------------------------------
+  Tipografía Mejorada              
+-----------------------------------------*/
+#home h1 {
+    color: #3d3d3f;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+#home h3 {
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+/*---------------------------------------
+  Línea azul decorativa              
+-----------------------------------------*/
+.blue-divider {
+    height: 2px;
+    width: 70%;
+    background: #d7b065;
+    margin: 15px auto;
+    opacity: 0.7;
+}
+
+/*---------------------------------------
+  Botón de flecha - Optimizado              
+-----------------------------------------*/
+.arrow-btn {
+    display: inline-block;
+    margin-top: 32px;
+}
+
+.arrow-icon {
+    background: #000000b5;
+    border-radius: 50%;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.arrow-btn:hover .arrow-icon {
+    background: var(--color-primary);
+    transform: translateY(5px);
+}
+
+/*---------------------------------------
+  Variables CSS (necesarias para transiciones)              
+-----------------------------------------*/
+:root {
+  --color-primary: #d7b065;
+  --transition: all 0.4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 2px solid #6e48aa;
+    color: #6e48aa;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #6e48aa;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #6e48aa;
+    color: white;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.art-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.art-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.art-info {
+    padding: 1rem;
+}
+
+.art-info h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.art-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lightbox-content img {
+    max-height: 70vh;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.art-info {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #9d50bb;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*---------------------------------------
+Estilo para Sección Contacto              
+-----------------------------------------*/
+#contact .section-card {
+    padding: var(--card-padding);
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  }
+  /* Placeholder para inputs de fecha/hora */
+  input[type="date"]:not(:focus):invalid::before,
+  input[type="time"]:not(:focus):invalid::before,
+  input[type="text"][placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #888;
+    margin-right: 0.5em;
+  }
+  
+  /* Select con flecha personalizada */
+  select.form-control {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d7b065' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Botón más atractivo */
+  #submit {
+    background-color: #d7b065;
+    color: white;
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+  
+  #submit:hover {
+    background-color: #c19a52;
+    transform: translateY(-2px);
+  }
+  
+  /* Icono en el botón */
+  #submit i {
+    margin-right: 8px;
+  }
+
+/*---------------------------------------
+    Footer section              
+  -----------------------------------------*/
+  
+  footer {
+    padding-top: 40px;
+    background: #000000;
+  }
+  
+  footer h4 {
+    color: #f9f9f9;
+  }
+  
+  footer a {
+    color: #aaa;
+  }
+  
+  footer a:hover {
+    color: #fff;
+  }
+  
+  footer .col-md-4 .support-cus:last-child {
+    padding-top: 12px;
+  }
+  
+  footer .col-md-4 .support-cus p {
+    line-height: 20px;
+  }
+  
+  footer .newsletter .form-control {
+    box-shadow: none;
+    transition: all 0.4s ease-in-out;
+    margin-top: 16px;
+    margin-bottom: 2px;
+  }
+  
+  footer .newsletter .form-control:focus {
+    border-bottom-color: #f2f2f2;
+  }
+  
+  footer .newsletter input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0px;
+  }
+  
+  footer .newsletter button {
+    background: #f9f9f9;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    height: 50px;
+  }
+  
+  footer .newsletter button:hover {
+    background: #d7b065;
+    color: #ffffff;
+  }
+  
+  footer .dash-line {
+    border-top: 1px solid #292929;
+    margin-top: 62px;
+    padding-bottom: 52px;
+    position: relative;
+  }
+  
+  
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .lightbox-content {
+        flex-direction: column;
+    }
+    
+    .lightbox-content img {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 80%;
+    }
+}
+</style>
+<body>
+    <div class="cargador">
+        <div class="spinner">
+          <img src="images/siluetag.gif" alt="Cargando...">
+        </div>
+      </div>
+    <div class="container">
+        <section id="home" class="parallax-section">
+            <div class="home-wrapper">
+                <h3>Museo OSOC</h3> 
+                
+                <!-- Línea azul decorativa -->
+                <div class="blue-divider"></div>
+                
+                <h1>
+                    Un espacio único diseñado para explorar, sentir y vivir el arte del presente. 
+                    <br>Donde el arte nace de la oscuridad y los sueños se transforman en creación.
+                </h1>
+                <a href="#about" class="arrow-btn">
+                    <i class="arrow-icon">↓</i>
+                </a>
+                <h3 style="color: #d7b065; margin-top: 25%;" id="origen">
+                    Origen, Sueño, Oscuridad y Creación
+                </h3>
+            </div>
+        </section>
+    </div>
+
+    <div id="buttons"> 
+        <a href="#work" id="flotante">EXPLORA LOS NIVELES</a>
+        <a href="#talleresOsoc" id="flotante">EVENTOS Y TALLERES</a>
+        <a href="#contact" id="flotante">VISITANOS</a>
+    </div>
+
+    <div class="controls">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pintura">Pinturas</button>
+        <button class="filter-btn" data-filter="fotografia">Fotografía</button>
+        <button class="filter-btn" data-filter="escultura">Esculturas</button>
+        <button class="filter-btn" data-filter="digital">Arte Digital</button>
+    </div>
+
+    <div class="gallery-container">
+        <!-- Las imágenes se agregarán dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="art-info">
+                <h2 id="art-title"></h2>
+                <p id="art-artist"></p>
+                <p id="art-year"></p>
+                <p id="art-desc"></p>
+            </div>
+        </div>
+        <a class="prev-btn">&#10094;</a>
+        <a class="next-btn">&#10095;</a>
+    </div>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>¡Visitas grupales en OSOC!</h3>
+          <p>Vive una experiencia unica con tu grupo en el museo que conecta el origen, el sueño, la oscuridad y la creación.</p>
+        </div>
+  
+        <div class="col-md-12 col-sm-12">
+          <!-- Formulario mejorado -->
+          <div>
+            <form action="#" method="post" id="contact-form">
+              <div class="row">
+                <!-- Nombre -->
+                <div class="col-md-6 col-sm-6">
+                  <input type="text" id="name" class="form-control" name="name" placeholder="Nombre completo" required>
+                </div>
+                
+                <!-- Email -->
+                <div class="col-md-6 col-sm-6">
+                  <input type="email" id="email" class="form-control" name="email" placeholder="Email de contacto ✉️" required>
+                </div>
+                
+                <!-- Fecha con placeholder mejorado -->
+                <div class="col-md-12 col-sm-12">
+                  <input type="date" id="date" class="form-control" name="date"  placeholder="Selecciona la fecha de visita 📅" required>
+                </div>   
+                
+                <!-- Hora con placeholder mejorado -->
+                <div class="col-md-6 col-sm-6">
+                  <input type="time" id="time" class="form-control" name="time" 
+                         placeholder="Horario de servicio (9:00 - 22:00)🕒" min="09:00" max="22:00" required>  
+                </div>    
+  
+                <!-- Select mejorado -->
+                <div class="col-md-6 col-sm-6">          
+                  <select id="nivel" name="nivel" required class="form-control">
+                    <option value="" disabled selected hidden>¿De dónde nos visita?🏫</option>
+                    <option value="kinder"> Kinder (3-6 años)👶</option>
+                    <option value="primaria">Primaria (6-12 años)👧 </option>
+                    <option value="secundaria">Secundaria (12-15 años)🧑 </option>
+                    <option value="preparatoria">Preparatoria (15-18 años)👨‍🎓 </option>
+                    <option value="universidad">Universidad🎓 </option>
+                    <option value="empresa"> Empresa/Organización💼</option>
+                    <option value="otro">Otro (especificar abajo) </option>
+                  </select>
+                </div> 
+                
+                <!-- Número de personas -->
+                <div class="col-md-6 col-sm-6">
+                  <input type="number" id="personas" name="personas" min="1" max="50" required 
+                         class="form-control" placeholder="Número de personas (máx. 50)👥 ">  
+                </div>
+                
+                <!-- Mensaje -->
+                <div class="col-md-12 col-sm-12">
+                  <textarea id="message" class="form-control" rows="5" name="message" 
+                            placeholder="¿Algo más que debamos saber? (requerimientos especiales, comentarios, etc.)💬 " 
+                            required></textarea>
+                </div>
+                
+                <!-- Botón de enviar -->
+                <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+                  <button id="submit" type="submit" class="form-control">
+                    <i class="fa fa-calendar-check-o"></i> AGENDAR VISITA
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- FOOTER SECTION -->
+<footer id="footer" class="parallax-section">
+    <div class="container">
+        <div class="row">
+               <div class="col-md-4 col-sm-4">
+                    <h4>Artista Digital <a href="">Octavio</a> </h4>
+                    <p>        Diseño web y
+                    <br> Proyecto Arquitectonico creado por <a href="https:/octaviovr5.github.io/Portafolio-Octavio/">Octavio</a>
+                    </p>
+               </div>
+  
+               <div class="col-md-4 col-sm-4">
+                    <div class="support-cus">
+                         <h4>Ubicación</h4>
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3163.9839946980724!2d-99.02590240977631!3d19.428287869992598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1739931045535!5m2!1ses-419!2smx" width="95%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"
+                         sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                        <a href="https://maps.app.goo.gl/iy6BGzWDoPTJnhCT8"><p>57205 Cdad. Jardín, Méx</p></a> 
+                    </div>
+                    <div class="support-cus">
+                         <h4>Información de contacto</h4>
+                         <p><a href="mailto:museo.osoc@gmail.com">Museo_OSOC@osoc.com.mx</a></p>
+                         <p> <a href="tel:+525648967642">Tel: +52 56 4896 7642</a> </p>
+                    </div>
+               </div>
+  
+               <div class="col-md-12 col-sm-12 clearfix">
+                    <div class="dash-line"></div>
+               </div>
+  
+               <div class="col-md-6 col-sm-6">
+                <p class="copyright-text">Copyright © 2025 <a href="https://octaviovr5.github.io/Portafolio-Octavio/">Octavio Velazquez</a></p>
+              </div>
+              
+              <div class="col-md-6 col-sm-6">
+                <ul class="social-icon">
+                  <li><a href="https://www.instagram.com/octaviovr3/" class="fa fa-instagram" target="_blank"></a></li>
+                  <li><a href="https://wa.me/5215648967642" class="fa fa-whatsapp" target="_blank"></a></li>
+                  <li><a href="https://github.com/Octaviovr5" class="fa fa-github" target="_blank"></a></li>
+                </ul>
+              </div>
+          </div>
+     </div>
+  </footer>
+  
+
+    <!-- <script src="script.js"></script> -->
+     <script>
+        // Section loader
+// Section loader
+document.addEventListener("DOMContentLoaded", function() {
+    let preloader = document.querySelector(".cargador");
+    if (!preloader) return;
+  
+    let minTime = 6000;
+    let startTime = Date.now();
+  
+    window.onload = function() {
+        let elapsedTime = Date.now() - startTime;
+        let remainingTime = minTime - elapsedTime;
+  
+        setTimeout(() => {
+            preloader.classList.add("hidden");
+            setTimeout(() => preloader.remove(), 600);
+        }, Math.max(remainingTime, 0));
+    };
+  
+    // Inicialización diferida para mejor performance
+    setTimeout(initGyroPermission, 300);
+  });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Datos de la galería (podrías reemplazar esto con una API)
+            const galleryData = [
+                {
+                    id: 1,
+                    title: "Noche estrellada",
+                    artist: "Vincent van Gogh",
+                    year: "1889",
+                    category: "pintura",
+                    description: "Una de las obras más conocidas de van Gogh, representa la vista desde la ventana de su habitación en el sanatorio de Saint-Rémy-de-Provence.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+                },
+                {
+                    id: 2,
+                    title: "La persistencia de la memoria",
+                    artist: "Salvador Dalí",
+                    year: "1931",
+                    category: "pintura",
+                    description: "Obra surrealista que muestra relojes derritiéndose en un paisaje onírico.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/The_Persistence_of_Memory.jpg/800px-The_Persistence_of_Memory.jpg"
+                },
+                {
+                    id: 3,
+                    title: "Migrant Mother",
+                    artist: "Dorothea Lange",
+                    year: "1936",
+                    category: "fotografia",
+                    description: "Fotografía icónica que captura las dificultades durante la Gran Depresión en Estados Unidos.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dorothea_Lange%27s_%22Migrant_Mother%22_photograph_in_the_NARA_public_domain_%28retouched%29.png/800px-Dorothea_Lange%27s_%22Migrant_Mother%22_photograph_in_the_NARA_public_domain_%28retouched%29.png"
+                },
+                {
+                    id: 4,
+                    title: "El beso",
+                    artist: "Auguste Rodin",
+                    year: "1882",
+                    category: "escultura",
+                    description: "Escultura en mármol que representa a dos amantes en un abrazo apasionado.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/The_Kiss_-_Rodin_-_Ny_Carlsberg_Glyptotek_%28cropped%29.jpg/800px-The_Kiss_-_Rodin_-_Ny_Carlsberg_Glyptotek_%28cropped%29.jpg"
+                },
+                {
+                    id: 5,
+                    title: "Composición digital",
+                    artist: "Anna Silva",
+                    year: "2020",
+                    category: "digital",
+                    description: "Obra de arte digital que explora la relación entre la tecnología y la naturaleza.",
+                    imageUrl: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    id: 6,
+                    title: "Guernica",
+                    artist: "Pablo Picasso",
+                    year: "1937",
+                    category: "pintura",
+                    description: "Famoso cuadro que representa el bombardeo de Guernica durante la Guerra Civil Española.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/PicassoGuernica.jpg/800px-PicassoGuernica.jpg"
+                },
+                {
+                    id: 7,
+                    title: "La joven de la perla",
+                    artist: "Johannes Vermeer",
+                    year: "1665",
+                    category: "pintura",
+                    description: "Conocida como la 'Mona Lisa del Norte', este retrato es famoso por su misterio y belleza.",
+                    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg"
+                },
+                {
+                    id: 8,
+                    title: "Formas geométricas",
+                    artist: "Carlos Méndez",
+                    year: "2021",
+                    category: "digital",
+                    description: "Exploración digital de formas geométricas y colores vibrantes.",
+                    imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                }
+            ];
+        
+            // Variables globales
+            const galleryContainer = document.querySelector('.gallery-container');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const artTitle = document.getElementById('art-title');
+            const artArtist = document.getElementById('art-artist');
+            const artYear = document.getElementById('art-year');
+            const artDesc = document.getElementById('art-desc');
+            const closeBtn = document.querySelector('.close-btn');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            let currentIndex = 0;
+            let filteredArt = [];
+        
+            // Inicializar la galería
+            function initGallery() {
+                displayArtworks(galleryData);
+                filteredArt = galleryData;
+                
+                // Event listeners para los botones de filtro
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remover la clase active de todos los botones
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        // Agregar la clase active al botón clickeado
+                        button.classList.add('active');
+                        
+                        const filterValue = button.getAttribute('data-filter');
+                        filterArtworks(filterValue);
+                    });
+                });
+            }
+        
+            // Mostrar las obras de arte en el DOM
+            function displayArtworks(artworks) {
+                galleryContainer.innerHTML = '';
+                
+                artworks.forEach((art, index) => {
+                    const artCard = document.createElement('div');
+                    artCard.className = `art-card ${art.category}`;
+                    artCard.innerHTML = `
+                        <img src="${art.imageUrl}" alt="${art.title}" class="art-img" data-index="${index}">
+                        <div class="art-info">
+                            <h3>${art.title}</h3>
+                            <p>${art.artist} (${art.year})</p>
+                        </div>
+                    `;
+                    galleryContainer.appendChild(artCard);
+                    
+                    // Agregar event listener para el lightbox
+                    const imgElement = artCard.querySelector('.art-img');
+                    imgElement.addEventListener('click', () => openLightbox(index));
+                });
+            }
+        
+            // Filtrar obras por categoría
+            function filterArtworks(category) {
+                if (category === 'all') {
+                    filteredArt = galleryData;
+                } else {
+                    filteredArt = galleryData.filter(art => art.category === category);
+                }
+                displayArtworks(filteredArt);
+            }
+        
+            // Abrir lightbox
+            function openLightbox(index) {
+                currentIndex = index;
+                updateLightbox();
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevenir scroll
+            }
+        
+            // Cerrar lightbox
+            function closeLightbox() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+            }
+        
+            // Actualizar contenido del lightbox
+            function updateLightbox() {
+                const art = filteredArt[currentIndex];
+                lightboxImg.src = art.imageUrl;
+                lightboxImg.alt = art.title;
+                artTitle.textContent = art.title;
+                artArtist.textContent = `Artista: ${art.artist}`;
+                artYear.textContent = `Año: ${art.year}`;
+                artDesc.textContent = art.description;
+            }
+        
+            // Navegar a la obra anterior
+            function prevArtwork() {
+                currentIndex = (currentIndex - 1 + filteredArt.length) % filteredArt.length;
+                updateLightbox();
+            }
+        
+            // Navegar a la obra siguiente
+            function nextArtwork() {
+                currentIndex = (currentIndex + 1) % filteredArt.length;
+                updateLightbox();
+            }
+        
+            // Event listeners para el lightbox
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', prevArtwork);
+            nextBtn.addEventListener('click', nextArtwork);
+        
+            // Cerrar lightbox al hacer clic fuera de la imagen
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        
+            // Navegación con teclado
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevArtwork();
+                    } else if (e.key === 'ArrowRight') {
+                        nextArtwork();
+                    }
+                }
+            });
+        
+            // Inicializar la galería
+            initGallery();
+        });
+     </script>
+</body>
+</html>
